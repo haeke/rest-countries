@@ -1,3 +1,14 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background: var(--darkBlue);
+}
+
+.headerTitle {
+  margin: 0;
+}
 .switch {
   position: relative;
   display: inline-block;
