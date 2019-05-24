@@ -1,0 +1,22 @@
+:root {
+  --darkBlue: hsl(209, 23%, 22%);
+  --darkBlueBackground: hsl(207, 26%, 17%);
+  --lightBlue: hsl(200, 15%, 8%);
+  --lightBlueBackground: hsl(0, 0%, 52%);
+  --lightGray: hsl(0, 0%, 98%);
+  --accentWhite: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
