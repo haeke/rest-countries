@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Countries from "./components/Countries/Countries";
+import App from "./components/App/App";
 
-ReactDOM.render(<Countries />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

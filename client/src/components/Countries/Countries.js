@@ -22,7 +22,7 @@ function Countries() {
   console.log("The isLoading Boolean ", isLoading);
   console.log("The errorMessage ", errorMessage);
   return (
-    <main className="countriesContainer">
+    <section className="countriesContainer">
       <h1>Countries Page.</h1>
       {/* A user can click on the submit button to fetch for data */}
       <form
@@ -56,7 +56,7 @@ function Countries() {
           </div>
         ))
       )}
-    </main>
+    </section>
   );
 }
 
