@@ -23,3 +23,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.fourth {
+  width: 24%;
+  flex: 0 1 calc(24% - 20px);
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.flagImage {
+  width: 100%;
+}
+
+.countryListWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  background: var(--darkBlue);
+}
+
+.countryTextContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.countryParagraph {
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .fourth {
+    width: 100%;
+    flex: 0 1 100%;
+  }
+}

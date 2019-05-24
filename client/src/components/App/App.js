@@ -7,14 +7,12 @@ import Header from "../Header/Header";
 const App = () => {
   return (
     <main className="mainContainer">
-      <div>
-        <Router>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Countries} />
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Countries} />
+        </Switch>
+      </Router>
     </main>
   );
 };

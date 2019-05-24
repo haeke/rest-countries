@@ -40,22 +40,32 @@ function Countries() {
       {/* population: data.population */}
       {/* region: data.region */}
       {/* capital: data.capital */}
-      {isLoading ? (
-        <h1>Loading Data...</h1>
-      ) : errorMessage ? (
-        <div>Error fetching data...</div>
-      ) : (
-        Object.keys(data).length > 0 &&
-        data.map(country => (
-          <div key={country.name}>
-            <img src={country.flag} alt={country.name} />
-            <h1>{country.name}</h1>
-            <h1>Population: {country.population}</h1>
-            <h4>Region: {country.region}</h4>
-            <h4>Capital: {country.capital}</h4>
-          </div>
-        ))
-      )}
+      <div className="countryListWrapper">
+        {isLoading ? (
+          <h1>Loading Data...</h1>
+        ) : errorMessage ? (
+          <div>Error fetching data...</div>
+        ) : (
+          Object.keys(data).length > 0 &&
+          data.map(country => (
+            <div className="fourth countryInfo" key={country.name}>
+              <img
+                className="flagImage"
+                src={country.flag}
+                alt={country.name}
+              />
+              <div className="countryTextContainer">
+                <h1>{country.name}</h1>
+                <h1 className="countryParagraph">
+                  Population: {country.population}
+                </h1>
+                <h1 className="countryParagraph">Region: {country.region}</h1>
+                <h1 className="countryParagraph">Capital: {country.capital}</h1>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
     </section>
   );
 }
