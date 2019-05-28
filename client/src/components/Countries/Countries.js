@@ -50,7 +50,10 @@ function Countries() {
           Object.keys(data).length > 0 &&
           data.map(country => (
             <Link
-              to={`/country/${country.name}`}
+              to={{
+                pathname: `/country/${country.name}`,
+                state: { country: country }
+              }}
               className="fourth countryInfo"
               key={country.name}
             >
