@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { useFetch } from "../../api/api";
 
@@ -48,7 +49,11 @@ function Countries() {
         ) : (
           Object.keys(data).length > 0 &&
           data.map(country => (
-            <button className="fourth countryInfo" key={country.name}>
+            <Link
+              to={`/country/${country.name}`}
+              className="fourth countryInfo"
+              key={country.name}
+            >
               <img
                 className="flagImage"
                 src={country.flag}
@@ -62,7 +67,7 @@ function Countries() {
                 <h1 className="countryParagraph">Region: {country.region}</h1>
                 <h1 className="countryParagraph">Capital: {country.capital}</h1>
               </div>
-            </button>
+            </Link>
           ))
         )}
       </div>

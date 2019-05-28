@@ -53,6 +53,7 @@ code {
   background: var(--darkBlue);
   padding: 0;
   border: none;
+  text-decoration: none;
 }
 
 .countryTextContainer {
