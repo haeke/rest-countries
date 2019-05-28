@@ -48,7 +48,7 @@ function Countries() {
         ) : (
           Object.keys(data).length > 0 &&
           data.map(country => (
-            <div className="fourth countryInfo" key={country.name}>
+            <button className="fourth countryInfo" key={country.name}>
               <img
                 className="flagImage"
                 src={country.flag}
@@ -62,7 +62,7 @@ function Countries() {
                 <h1 className="countryParagraph">Region: {country.region}</h1>
                 <h1 className="countryParagraph">Capital: {country.capital}</h1>
               </div>
-            </div>
+            </button>
           ))
         )}
       </div>
