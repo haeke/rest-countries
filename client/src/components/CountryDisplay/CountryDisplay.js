@@ -18,21 +18,47 @@ import "./CountryDisplay.css";
 const CountryDisplay = ({ ...props }) => {
   const { country } = props.location.state;
   return (
-    <section>
+    <section className="countryInfoContainer">
       <Link to="/">Back</Link>
       <h1>Country Display</h1>
       <img className="flagImage" src={country.flag} alt={country.name} />
-      <h1>{country.name}</h1>
-      <h2>Native Name: {country.nativeName}</h2>
-      <h2>Population: {country.population}</h2>
-      <h2>Region: {country.region}</h2>
-      <h2>Sub Region: {country.subregion}</h2>
-      <h2>Capital: {country.capital}</h2>
-      <h2>Top Level Domain: {country.topLevelDomain}</h2>
-      <h2>Currencies: {country.currencies.map(name => name.name)}</h2>
-      <h2>Languages: {country.languages.map(language => language.name)}</h2>
-      <h2>Border Countries:</h2>
-      {country.borders.map(name => ` ${name}\t`)}
+      <h1 className="countryName">{country.name}</h1>
+      <h2 className="countryDisplayText">
+        Native Name:{" "}
+        <span className="countryDetailSpan">{country.nativeName}</span>
+      </h2>
+      <h2 className="countryDisplayText">
+        Population:{" "}
+        <span className="countryDetailSpan">{country.population}</span>
+      </h2>
+      <h2 className="countryDisplayText">
+        Region: <span className="countryDetailSpan">{country.region}</span>
+      </h2>
+      <h2 className="countryDisplayText">
+        Sub Region:{" "}
+        <span className="countryDetailSpan">{country.subregion}</span>
+      </h2>
+      <h2 className="countryDisplayText">Capital: {country.capital}</h2>
+      <h2 className="countryDisplayText">
+        Top Level Domain:{" "}
+        <span className="countryDetailSpan">{country.topLevelDomain}</span>
+      </h2>
+      <h2 className="countryDisplayText">
+        Currencies:{" "}
+        {country.currencies.map(name => (
+          <span className="countryDetailSpan">{name.name}</span>
+        ))}
+      </h2>
+      <h2 className="countryDisplayText">
+        Languages:{" "}
+        <span className="countryDetailSpan">
+          {country.languages.map(language => language.name)}
+        </span>
+      </h2>
+      <h2 className="countryDisplayText">Border Countries:</h2>
+      {country.borders.map(name => (
+        <span className="countryDetailSpan">{` ${name}\t`}</span>
+      ))}
     </section>
   );
 };

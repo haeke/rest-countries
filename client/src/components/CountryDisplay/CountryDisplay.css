@@ -1,0 +1,17 @@
+.countryInfoContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.countryName {
+  color: var(--accentWhite);
+  font-size: 1.3rem;
+}
+
+.countryDisplayText {
+  font-size: 1rem;
+}
+
+.countryDetailSpan {
+  font-weight: 400;
+}
