@@ -7,7 +7,7 @@ const Header = () => {
     <header className="headerContainer">
       <h1 className="headerTitle">Where in the world?</h1>
       <input type="checkbox" id="toggle" className="offscreen" />{" "}
-      <label for="toggle" className="switch" />
+      <label htmlFor="toggle" className="switch" />
     </header>
   );
 };
