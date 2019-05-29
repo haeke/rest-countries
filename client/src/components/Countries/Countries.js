@@ -41,7 +41,7 @@ function Countries() {
             doFetch(`https://restcountries.eu/rest/v2/name/${name}`);
           }}
         >
-          <div>
+          <div className="inputIconGroup">
             <input
               className="countryInput"
               name="name"
