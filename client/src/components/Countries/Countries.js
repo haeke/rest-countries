@@ -18,6 +18,14 @@ function Countries() {
       doFetch(`https://restcountries.eu/rest/v2/name/${value}`);
     }
   };
+  // This function is called when the filter drop select is used.
+  const handleSelect = event => {
+    const { value } = event.target;
+    // calls the doFetch function with a different url
+    if (value !== "") {
+      doFetch(`https://restcountries.eu/rest/v2/region/${value}`);
+    }
+  };
   // For testing purposes - we can see the values inside of the custom reducer hook.
   console.log("The data object ", data);
   console.log("The isLoading Boolean ", isLoading);
@@ -25,7 +33,7 @@ function Countries() {
   return (
     <section className="countriesContainer">
       <div className="inputSection">
-        .{/* A user can click on the submit button to fetch for data */}
+        {/* A user can click on the submit button to fetch for data */}
         <form
           onSubmit={event => {
             event.preventDefault();
@@ -33,7 +41,16 @@ function Countries() {
           }}
         >
           <input name="name" value={name} onChange={handleChange} />
-          <button type="submit">Submit</button>
+          <button className="searchIcon">
+            <i className="fa fa-search " />
+          </button>
+          <select name="regions" id="region" onChange={handleSelect}>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
         </form>
       </div>
       {/* Refactor to component named:  */}
