@@ -54,7 +54,7 @@ function Countries() {
             </button>
           </div>
           <select name="regions" id="region" onChange={handleSelect}>
-            <option value="" selected disabled hidden>
+            <option value="" defaultValue disabled hidden>
               Filter by Region
             </option>
             <option value="Africa">Africa</option>
