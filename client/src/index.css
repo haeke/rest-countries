@@ -145,4 +145,8 @@ body {
   .inputIconGroup {
     width: 100%;
   }
+
+  .countryInput {
+    margin: 10px 0;
+  }
 }
