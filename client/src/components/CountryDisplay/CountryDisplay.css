@@ -4,6 +4,7 @@
 }
 
 .countryName {
+  margin: 0;
   color: var(--accentWhite);
   font-size: 1.3rem;
 }
@@ -21,14 +22,14 @@
 }
 
 .countryInfoLeft {
-  flex: 1;
+  flex: 1 0;
 }
 
 .countryInfoRight {
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .countryDisplayImage {
@@ -47,4 +48,28 @@
 
 .countryInfoWrapperRight {
   flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .countryListing {
+    display: block;
+  }
+
+  .countryName {
+    margin: 5px 0;
+  }
+
+  .countryDisplayImage {
+    width: 100%;
+  }
+
+  .countryInfoLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countryInfoRight {
+    width: 100%;
+  }
 }

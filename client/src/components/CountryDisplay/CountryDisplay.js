@@ -65,7 +65,9 @@ const CountryDisplay = ({ ...props }) => {
               <h2 className="countryDisplayText">
                 Currencies:{" "}
                 {country.currencies.map(name => (
-                  <span className="countryDetailSpan">{name.name}</span>
+                  <span className="countryDetailSpan" key={name.name}>
+                    {name.name}
+                  </span>
                 ))}
               </h2>
               <h2 className="countryDisplayText">
@@ -76,7 +78,10 @@ const CountryDisplay = ({ ...props }) => {
               </h2>
               <h2 className="countryDisplayText">Border Countries:</h2>
               {country.borders.map(name => (
-                <span className="countryDetailSpan">{` ${name}\t`}</span>
+                <span
+                  className="countryDetailSpan"
+                  key={name}
+                >{` ${name}\t`}</span>
               ))}
             </div>
           </div>
