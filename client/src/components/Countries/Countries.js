@@ -35,15 +35,18 @@ function Countries() {
       <div className="inputSection">
         {/* A user can click on the submit button to fetch for data */}
         <form
+          className="formWrapper"
           onSubmit={event => {
             event.preventDefault();
             doFetch(`https://restcountries.eu/rest/v2/name/${name}`);
           }}
         >
-          <input name="name" value={name} onChange={handleChange} />
-          <button className="searchIcon">
-            <i className="fa fa-search " />
-          </button>
+          <div>
+            <input name="name" value={name} onChange={handleChange} />
+            <button className="searchIcon">
+              <i className="fa fa-search " />
+            </button>
+          </div>
           <select name="regions" id="region" onChange={handleSelect}>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
