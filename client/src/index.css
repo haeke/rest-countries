@@ -116,6 +116,11 @@ body {
   font-size: 0.8rem;
 }
 
+.countryInput {
+  width: 300px;
+  height: 25px;
+}
+
 .searchIcon {
   position: relative;
   color: var(--lightBlueBackground);

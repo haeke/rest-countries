@@ -42,12 +42,21 @@ function Countries() {
           }}
         >
           <div>
-            <input name="name" value={name} onChange={handleChange} />
+            <input
+              className="countryInput"
+              name="name"
+              value={name}
+              placeholder="Search for a country..."
+              onChange={handleChange}
+            />
             <button className="searchIcon">
               <i className="fa fa-search " />
             </button>
           </div>
           <select name="regions" id="region" onChange={handleSelect}>
+            <option value="" selected disabled hidden>
+              Filter by Region
+            </option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
