@@ -64,8 +64,8 @@ body {
 }
 
 .fourth {
-  width: 24%;
-  flex: 0 1 calc(24% - 20px);
+  width: 25%;
+  flex: 0 1 calc(25% - 20px);
   margin-right: 10px;
   margin-bottom: 20px;
 }
@@ -74,9 +74,13 @@ body {
   width: 100%;
 }
 
+.countriesContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .countryListWrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 

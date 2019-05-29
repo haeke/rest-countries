@@ -24,16 +24,18 @@ function Countries() {
   console.log("The errorMessage ", errorMessage);
   return (
     <section className="countriesContainer">
-      .{/* A user can click on the submit button to fetch for data */}
-      <form
-        onSubmit={event => {
-          event.preventDefault();
-          doFetch(`https://restcountries.eu/rest/v2/name/${name}`);
-        }}
-      >
-        <input name="name" value={name} onChange={handleChange} />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="inputSection">
+        .{/* A user can click on the submit button to fetch for data */}
+        <form
+          onSubmit={event => {
+            event.preventDefault();
+            doFetch(`https://restcountries.eu/rest/v2/name/${name}`);
+          }}
+        >
+          <input name="name" value={name} onChange={handleChange} />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
       {/* Refactor to component named:  */}
       {/* include the flag image, flag name, population, region and capital */}
       {/* image name : data.flag */}
