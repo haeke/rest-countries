@@ -24,8 +24,7 @@ function Countries() {
   console.log("The errorMessage ", errorMessage);
   return (
     <section className="countriesContainer">
-      <h1>Countries Page.</h1>
-      {/* A user can click on the submit button to fetch for data */}
+      .{/* A user can click on the submit button to fetch for data */}
       <form
         onSubmit={event => {
           event.preventDefault();

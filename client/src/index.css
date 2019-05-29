@@ -1,7 +1,7 @@
 :root {
-  --darkBlue: hsl(209, 23%, 22%);
+  --darkBlue: hsl(200, 15%, 8%);
   --darkBlueBackground: hsl(207, 26%, 17%);
-  --lightBlue: hsl(200, 15%, 8%);
+  --lightBlue: hsl(209, 23%, 22%);
   --lightBlueBackground: hsl(0, 0%, 52%);
   --lightGray: hsl(0, 0%, 98%);
   --accentWhite: hsl(0, 0%, 100%);
@@ -19,9 +19,42 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* only for testing */
+.lightBlue {
+  background: var(--lightBlue);
+}
+
+.darkBlueBackground {
+  background: var(--lightBlueBackground);
+}
+
+.darkBlue {
+  background: var(--darkBlue);
+}
+
+.darkBlueBackground {
+  background: var(--darkBlueBackground);
+}
+
+.whiteText {
+  color: var(--accentWhite);
+}
+
+.backButton {
+  background: var(--lightBlue);
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: 1px 1px 1px var(--lighGray);
+}
+
+.link {
+  color: var(--accentWhite);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.backLink {
+  margin-left: 4px;
 }
 
 .mainContainer {
@@ -50,7 +83,7 @@ code {
 .countryInfo {
   display: flex;
   flex-direction: column;
-  background: var(--darkBlue);
+  background: var(--lightBlue);
   padding: 0;
   border: none;
   text-decoration: none;
