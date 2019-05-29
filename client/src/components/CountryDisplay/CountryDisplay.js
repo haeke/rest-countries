@@ -26,49 +26,60 @@ const CountryDisplay = ({ ...props }) => {
         </Link>
       </button>
       <div className="countryListing">
-        <img
-          className="countryDisplayImage"
-          src={country.flag}
-          alt={country.name}
-        />
-        <div className="countryInfo">
+        <div className="countryInfoLeft">
+          <img
+            className="countryDisplayImage"
+            src={country.flag}
+            alt={country.name}
+          />
+        </div>
+        <div className="countryInfoRight">
           <h1 className="countryName">{country.name}</h1>
-          <h2 className="countryDisplayText">
-            Native Name:{" "}
-            <span className="countryDetailSpan">{country.nativeName}</span>
-          </h2>
-          <h2 className="countryDisplayText">
-            Population:{" "}
-            <span className="countryDetailSpan">{country.population}</span>
-          </h2>
-          <h2 className="countryDisplayText">
-            Region: <span className="countryDetailSpan">{country.region}</span>
-          </h2>
-          <h2 className="countryDisplayText">
-            Sub Region:{" "}
-            <span className="countryDetailSpan">{country.subregion}</span>
-          </h2>
-          <h2 className="countryDisplayText">Capital: {country.capital}</h2>
-          <h2 className="countryDisplayText">
-            Top Level Domain:{" "}
-            <span className="countryDetailSpan">{country.topLevelDomain}</span>
-          </h2>
-          <h2 className="countryDisplayText">
-            Currencies:{" "}
-            {country.currencies.map(name => (
-              <span className="countryDetailSpan">{name.name}</span>
-            ))}
-          </h2>
-          <h2 className="countryDisplayText">
-            Languages:{" "}
-            <span className="countryDetailSpan">
-              {country.languages.map(language => language.name)}
-            </span>
-          </h2>
-          <h2 className="countryDisplayText">Border Countries:</h2>
-          {country.borders.map(name => (
-            <span className="countryDetailSpan">{` ${name}\t`}</span>
-          ))}
+          <div className="countryInfoWrapper">
+            <div className="countryInfoWrapperLeft">
+              <h2 className="countryDisplayText">
+                Native Name:{" "}
+                <span className="countryDetailSpan">{country.nativeName}</span>
+              </h2>
+              <h2 className="countryDisplayText">
+                Population:{" "}
+                <span className="countryDetailSpan">{country.population}</span>
+              </h2>
+              <h2 className="countryDisplayText">
+                Region:{" "}
+                <span className="countryDetailSpan">{country.region}</span>
+              </h2>
+              <h2 className="countryDisplayText">
+                Sub Region:{" "}
+                <span className="countryDetailSpan">{country.subregion}</span>
+              </h2>
+              <h2 className="countryDisplayText">Capital: {country.capital}</h2>
+            </div>
+            <div className="countryInfoWrapperRight">
+              <h2 className="countryDisplayText">
+                Top Level Domain:{" "}
+                <span className="countryDetailSpan">
+                  {country.topLevelDomain}
+                </span>
+              </h2>
+              <h2 className="countryDisplayText">
+                Currencies:{" "}
+                {country.currencies.map(name => (
+                  <span className="countryDetailSpan">{name.name}</span>
+                ))}
+              </h2>
+              <h2 className="countryDisplayText">
+                Languages:{" "}
+                <span className="countryDetailSpan">
+                  {country.languages.map(language => language.name)}
+                </span>
+              </h2>
+              <h2 className="countryDisplayText">Border Countries:</h2>
+              {country.borders.map(name => (
+                <span className="countryDetailSpan">{` ${name}\t`}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -20,7 +20,11 @@
   display: flex;
 }
 
-.countryInfo {
+.countryInfoLeft {
+  flex: 1;
+}
+
+.countryInfoRight {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -28,5 +32,19 @@
 }
 
 .countryDisplayImage {
-  width: 50%;
+  width: 80%;
+}
+
+.countryInfoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.countryInfoWrapperLeft {
+  flex: 1;
+}
+
+.countryInfoWrapperRight {
+  flex: 1;
 }
