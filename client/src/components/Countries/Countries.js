@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import CountryInput from "../CountryInput/CountryInput";
+import CountrySelect from "../CountrySelect/CountrySelect";
 
 import { useFetch } from "../../api/api";
 
@@ -55,16 +56,7 @@ function Countries() {
               <i className="fa fa-search " />
             </button>
           </div>
-          <select name="regions" id="region" onChange={handleSelect}>
-            <option value="" defaultValue disabled hidden>
-              Filter by Region
-            </option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+          <CountrySelect defaultSelect="Filter by Region" handleSelect={handleSelect} options={["Africa", "Americas", "Asia", "Europe", "Oceania"]} />
         </form>
       </div>
       {/* Refactor to component named:  */}
