@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import CountryInput from "../CountryInput/CountryInput";
+
 import { useFetch } from "../../api/api";
 
 function Countries() {
@@ -42,12 +44,12 @@ function Countries() {
           }}
         >
           <div className="inputIconGroup">
-            <input
+            <CountryInput
               className="countryInput"
               name="name"
               value={name}
               placeholder="Search for a country..."
-              onChange={handleChange}
+              handleChange={handleChange}
             />
             <button className="searchIcon">
               <i className="fa fa-search " />
