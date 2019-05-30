@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import CountryInput from "../CountryInput/CountryInput";
+import CountryImage from "../CountryImage/CountryImage";
 import CountrySelect from "../CountrySelect/CountrySelect";
+import CountryFlagInfo from "../CountryFlagInfo/CountryFlagInfo";
 
 import { useFetch } from "../../api/api";
 
@@ -56,7 +58,11 @@ function Countries() {
               <i className="fa fa-search " />
             </button>
           </div>
-          <CountrySelect defaultSelect="Filter by Region" handleSelect={handleSelect} options={["Africa", "Americas", "Asia", "Europe", "Oceania"]} />
+          <CountrySelect
+            defaultSelect="Filter by Region"
+            handleSelect={handleSelect}
+            options={["Africa", "Americas", "Asia", "Europe", "Oceania"]}
+          />
         </form>
       </div>
       {/* Refactor to component named:  */}
@@ -81,19 +87,20 @@ function Countries() {
               className="fourth countryInfo"
               key={country.name}
             >
-              <img
-                className="flagImage"
+              <CountryImage
                 src={country.flag}
                 alt={country.name}
+                className="flagImage"
               />
-              <div className="countryTextContainer">
-                <h1>{country.name}</h1>
-                <h1 className="countryParagraph">
-                  Population: {country.population}
-                </h1>
-                <h1 className="countryParagraph">Region: {country.region}</h1>
-                <h1 className="countryParagraph">Capital: {country.capital}</h1>
-              </div>
+              <CountryFlagInfo
+                className="countryTextContainer"
+                countryTitle={country.name}
+                countryTitleClass=""
+                countryPopulation={country.population}
+                countryTextClass="countryText"
+                countryRegion={country.region}
+                countryCapital={country.capital}
+              />
             </Link>
           ))
         )}
