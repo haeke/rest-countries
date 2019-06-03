@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./CountryDisplay.css";
 
+import CountryImage from "../CountryImage/CountryImage";
+
 // Info to be displayed
 // Country Name - country.name
 // Native Name - country.nativeName
@@ -25,12 +27,12 @@ const CountryDisplay = ({ ...props }) => {
           <span className="backLink">Back</span>
         </Link>
       </button>
-      <div className="countryListing">
+      <div className="countryInfo">
         <div className="countryInfoLeft">
-          <img
-            className="countryDisplayImage"
+          <CountryImage
             src={country.flag}
             alt={country.name}
+            className="countryDisplayImage"
           />
         </div>
         <div className="countryInfoRight">
@@ -53,7 +55,10 @@ const CountryDisplay = ({ ...props }) => {
                 Sub Region:{" "}
                 <span className="countryDetailSpan">{country.subregion}</span>
               </h2>
-              <h2 className="countryDisplayText">Capital: {country.capital}</h2>
+              <h2 className="countryDisplayText">
+                Capital:{" "}
+                <span className="countryDetailSpan">{country.capital}</span>
+              </h2>
             </div>
             <div className="countryInfoWrapperRight">
               <h2 className="countryDisplayText">
