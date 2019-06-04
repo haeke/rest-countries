@@ -1,0 +1,13 @@
+.countrySelect {
+  background: var(--lightBlue);
+  border: 1px solid transparent;
+  color: var(--accentWhite);
+  font-size: 1rem;
+}
+
+.countrySelectAlt {
+  background: var(--accentWhite);
+  color: var(--darkBlue);
+  border: 1px solid transparent;
+  font-size: 1rem;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 // The toggle and on props are used to control the active class that sets the background and font color for the theme.
@@ -7,7 +7,9 @@ import "./Header.css";
 const Header = ({ toggle, on }) => {
   return (
     <header className={on ? "headerContainerAlt" : "headerContainer"}>
-      <h1 className="headerTitle">Where in the world?</h1>
+      <Link className="headerTitle" to="/">
+        <h1 className="headerTitle">Where in the world?</h1>
+      </Link>
       <input
         type="checkbox"
         id="toggle"

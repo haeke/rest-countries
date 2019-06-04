@@ -62,6 +62,7 @@ function Countries({ on }) {
             defaultSelect="Filter by Region"
             handleSelect={handleSelect}
             options={["Africa", "Americas", "Asia", "Europe", "Oceania"]}
+            on={on}
           />
         </form>
       </div>
