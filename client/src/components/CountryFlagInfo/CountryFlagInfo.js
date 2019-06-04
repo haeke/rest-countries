@@ -26,7 +26,7 @@ CountryFlagInfo.propTypes = {
   className: PropTypes.string,
   countryTitle: PropTypes.string,
   countryTitleClass: PropTypes.string,
-  countryPopulation: PropTypes.string,
+  countryPopulation: PropTypes.number,
   countryTextClass: PropTypes.string,
   countyRegion: PropTypes.string,
   countryCapital: PropTypes.string
