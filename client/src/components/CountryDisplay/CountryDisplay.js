@@ -19,6 +19,7 @@ import CountryImage from "../CountryImage/CountryImage";
 
 const CountryDisplay = ({ ...props }) => {
   const { country } = props.location.state;
+  const { on } = props;
   return (
     <section className="countryInfoContainer">
       <button className="backButton">
@@ -27,7 +28,7 @@ const CountryDisplay = ({ ...props }) => {
           <span className="backLink">Back</span>
         </Link>
       </button>
-      <div className="countryInfo">
+      <div className={on ? "countryInfoAlt" : "countryInfo"}>
         <div className="countryInfoLeft">
           <CountryImage
             src={country.flag}
