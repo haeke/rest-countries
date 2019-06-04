@@ -59,7 +59,7 @@ body {
 }
 
 .backButtonAlt a {
-  color: var(--darkBlue) !important;
+  color: var(--darkBlue);
 }
 
 .link {

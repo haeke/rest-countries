@@ -10,7 +10,9 @@ const CountrySelect = ({ defaultSelect, handleSelect, options }) => {
         {defaultSelect}
       </option>
       {options.map(optionName => (
-        <option value={optionName}>{optionName}</option>
+        <option key={optionName} value={optionName}>
+          {optionName}
+        </option>
       ))}
     </select>
   );
