@@ -22,7 +22,7 @@ const CountryDisplay = ({ ...props }) => {
   const { on } = props;
   return (
     <section className="countryInfoContainer">
-      <button className="backButton">
+      <button className={on ? "backButtonAlt" : "backButton"}>
         <Link className="whiteText link" to="/">
           <i className="fas fa-arrow-left" />
           <span className="backLink">Back</span>
