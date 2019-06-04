@@ -2,9 +2,11 @@ import React from "react";
 
 import "./Header.css";
 
-const Header = ({ toggle }) => {
+// The toggle and on props are used to control the active class that sets the background and font color for the theme.
+
+const Header = ({ toggle, on }) => {
   return (
-    <header className="headerContainer">
+    <header className={on ? "headerContainerAlt" : "headerContainer"}>
       <h1 className="headerTitle">Where in the world?</h1>
       <input
         type="checkbox"

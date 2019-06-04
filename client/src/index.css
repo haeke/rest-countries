@@ -21,7 +21,7 @@ body {
 
 .newBody {
   color: var(--darkBlue);
-  background: var(--accentWhite);
+  background: var(--lightGray);
 }
 
 /* only for testing */

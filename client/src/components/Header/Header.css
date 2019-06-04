@@ -6,6 +6,15 @@
   background: var(--lightBlue);
 }
 
+.headerContainerAlt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background: var(--accentWhite);
+  color: var(--darkBlue);
+}
+
 .headerTitle {
   margin: 0;
 }
@@ -35,7 +44,7 @@ input[type="checkbox"]:checked + .switch::after {
   background-color: var(--darkBlue);
 }
 input[type="checkbox"]:checked + .switch {
-  background-color: var(--accentWhite);
+  background-color: var(--lightGray);
 }
 .offscreen {
   position: absolute;

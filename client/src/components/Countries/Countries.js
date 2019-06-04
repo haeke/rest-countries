@@ -9,7 +9,7 @@ import CountryFlagInfo from "../CountryFlagInfo/CountryFlagInfo";
 
 import { useFetch } from "../../api/api";
 
-function Countries() {
+function Countries({ on }) {
   let [name, updateName] = useState("am");
   // The useFetch hook returns objects and a method to change the url that we will use to fetch different data. America is loaded initially so that there will be data on the page.
   let { data, isLoading, errorMessage, doFetch } = useFetch(
@@ -84,7 +84,7 @@ function Countries() {
                 pathname: `/country/${country.name}`,
                 state: { country: country }
               }}
-              className="fourth countryInfo"
+              className={on ? "fourth countryInfoAlt" : "fourth countryInfo"}
               key={country.name}
             >
               <CountryImage
