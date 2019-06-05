@@ -11,8 +11,9 @@ const CountrySelect = ({ defaultSelect, handleSelect, options, on }) => {
       name="regions"
       id="region"
       onChange={handleSelect}
+      defaultValue={defaultSelect}
     >
-      <option value="" defaultValue disabled hidden>
+      <option value={defaultSelect} disabled>
         {defaultSelect}
       </option>
       {options.map(optionName => (
@@ -26,7 +27,8 @@ const CountrySelect = ({ defaultSelect, handleSelect, options, on }) => {
 
 CountrySelect.propTypes = {
   defaultSelect: PropTypes.string,
-  options: PropTypes.array
+  options: PropTypes.array,
+  on: PropTypes.bool
 };
 
 export default CountrySelect;
