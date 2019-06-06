@@ -15,7 +15,7 @@ const App = () => {
         <Header toggle={toggle} on={on} />
         <Switch>
           <Route
-            path="/"
+            path="/rest-countries"
             exact
             component={props => <Countries on={on} {...props} />}
           />

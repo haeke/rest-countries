@@ -7,7 +7,7 @@ import "./Header.css";
 const Header = ({ toggle, on }) => {
   return (
     <header className={on ? "headerContainerAlt" : "headerContainer"}>
-      <Link className="headerTitle" to="/">
+      <Link className="headerTitle" to="/rest-countries">
         <h1 className="headerTitle">Where in the world?</h1>
       </Link>
       <input
