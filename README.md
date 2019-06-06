@@ -2,6 +2,8 @@
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
+URL - https://haeke.github.io/rest-countries
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
@@ -23,13 +25,13 @@ Your users should be able to:
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+- Toggle the color scheme between light and dark mode _(optional)_
 
 Want some support on the challenge? Join our Slack community and ask questions in the **#help** channel.
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. 
+Your task is to build out the project to the designs inside the `/design` folder.
 
 In this challenge, you will find mobile and desktop designs in light and dark mode color schemes for both pages.
 
