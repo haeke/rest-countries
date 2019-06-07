@@ -28,15 +28,15 @@ const CountryDisplay = ({ ...props }) => {
           <span className="backLink">Back</span>
         </Link>
       </button>
-      <div className={on ? "countryInfoAlt" : "countryInfo"}>
-        <div className="countryInfoLeft">
+      <div className={on ? "countryInfoDisplayAlt" : "countryInfoDisplay"}>
+        <div className="countryInfoDisplayLeft">
           <CountryImage
             src={country.flag}
             alt={country.name}
             className="countryDisplayImage"
           />
         </div>
-        <div className="countryInfoRight">
+        <div className="countryInfoDisplayRight">
           <h1 className="countryName">{country.name}</h1>
           <div className="countryInfoWrapper">
             <div className="countryInfoWrapperLeft">
